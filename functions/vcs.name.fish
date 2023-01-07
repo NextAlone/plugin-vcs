@@ -1,9 +1,7 @@
 function vcs.name
-  for name in git hg svn
-    if eval vcs.$name.present
-      echo $name
-      return 0
+    if eval vcs.git.present
+        echo git
+        return 0
     end
-  end
-  return 1
+    return 1
 end
